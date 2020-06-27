@@ -1,24 +1,21 @@
 #include <stdio.h>
 #include <math.h>
-double fact(int num)
+#define eps 1e-5    //0.00001
+
+int main()
 {
-    double result=1;
-    for(int i=1;i<=num;i++)
-    {
-        result*=i;
+    double x, sum = 1.0;
+    scanf("%lf", &x);
+    double result = 1.0;
+    int i;
+    for (i = 1; ; i++) {
+        result = (result * x) / i;
+        sum += result;
+        if (result < eps) {
+            break;
+        }
     }
-    return result;
-}
-int main() {
-double x;
-double result=1;
-int i=1;
-scanf("%lf",&x);
-while(pow(x,i)/fact(i)<0.00001)
-{
-    result+=pow(x,i)/fact(i);
-    i++;
-}
-printf("%lf",result);
+    printf("%.4f", sum);
     return 0;
 }
+
