@@ -3,23 +3,24 @@ int Greatest_common_divisor(int a,int b)
 {
 int large=0;
 int Small=0;
-if(a>b)
-{
-    large=a;
-    Small=b;
-}
-else
-{
-    large=b;
-    Small=a;
-}
-for(int i=Small;i>0;i--)
-{
-    if(a/i==b/i)
-{
-        return i;
-}
-}
+    if(a>b)
+    {
+        large=a;
+        Small=b;
+    }
+    else
+    {
+        large=b;
+        Small=a;
+    }
+    for(int i=Small;i>0;i--)
+    {
+        if((a%i)==0){
+            if(b%i==0){
+                return i;
+            }
+        }
+    }
 }
 int Least_common_multiple(int a,int b)
 {
@@ -37,7 +38,7 @@ int Least_common_multiple(int a,int b)
     }
     int time=1;
     int temp=big*time;
-    while(temp/small!=0)
+    while(temp%small!=0)
     {
         temp=big*time;
         time++;
