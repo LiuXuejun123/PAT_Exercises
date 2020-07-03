@@ -1,17 +1,18 @@
 #include <stdio.h>
-#include <math.h>
-int main()
+int fun(int N)
 {
-    int n;
-    int num;
-    int minNum;
-    scanf("%d",&n);
-    for(int i=0;i<n;i++){
-        scanf("%d",&num);
-        if(0==i) minNum=num;
-        else minNum=(minNum>num? num : minNum);
-    }
-    printf("min = %d\n",minNum);
+    int result=1;
+    for(int i=N-1;i>0;i--)
+        {
+        result=result+1;
+        result=result*2;
+        }
+    return result;
+}
+int main() {
+    int N;
+    scanf("%d",&N);
 
+    printf("%d",fun(N));
     return 0;
 }
