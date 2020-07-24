@@ -1,34 +1,29 @@
-#include <stdio.h>
-int a[10]={0};
-int b[10];
-int n=0;
-int temp;
-int flag=0;
-void bubble_sort(int arr[],int len)
-{
-    int i,j,temp;
-    for(i=0;i<len-1;i++)
-        for(j=0;j<len-1;j++)
-            if(arr[j]<arr[j+1])
-            {
-                temp=arr[j];
-                arr[j]=arr[j+1];
-                arr[j+1]=temp;
-            }
-}
-int main() {
-scanf("%d",&n);
-for(int i=0;i<n;i++){
-    scanf("%d",&temp);
-    while(temp!=0)
-    {
-        flag=temp%10;
-        a[flag]++;
-        temp=temp/10;
+#include<stdio.h>
+#define MAXN 10
+
+int main(void) {
+    int n, number, index, Times, i;
+    int a[MAXN] = {0};
+
+    scanf("%d", &n);
+    for ( i=0; i<n; i++ ) {
+        scanf("%d", &number);
+        while ( number ) {
+            index = number % 10;
+            a[index]++;
+            number = number / 10;
+        }
     }
-}
 
-printf("")
+    Times = 0;
+    for ( i=0; i<MAXN; i++ )
+        if ( Times < a[i] )
+            Times = a[i];
+    printf("%d:", Times);
 
-return 0;
+    for ( i=0; i<MAXN; i++ )
+        if ( Times == a[i] )
+            printf(" %d", i);
+
+    return 0;
 }
