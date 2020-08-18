@@ -1,0 +1,3 @@
+C:/Users/liuxu/Desktop/PAT_Exercises/algorithm_basis/Perfect_cube/cmake-build-debug/CMakeFiles/Perfect_cube.dir
+C:/Users/liuxu/Desktop/PAT_Exercises/algorithm_basis/Perfect_cube/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/liuxu/Desktop/PAT_Exercises/algorithm_basis/Perfect_cube/cmake-build-debug/CMakeFiles/rebuild_cache.dir
