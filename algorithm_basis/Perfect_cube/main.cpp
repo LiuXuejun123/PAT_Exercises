@@ -3,19 +3,12 @@
 #include <iostream>
 #include <cstdio>
 int main() {
-    int N;
-    scanf("%d",&N);
-    for (int i = 2; i <=N ; ++i)
-        for(int j = 2 ; j< i ; ++j)
-            for (int k = j; k <i ; ++k)
-                for (int l = k; l < i; ++l) {
-                        if ((i*i*i)==(j*j*j)+(k*k*k)+(l*l*l))
-                        {
-                            printf("cude = %d,triple = %d %d %d\n",i,j,k,l);
-                        }
-                }
+    int i;
+    for(i=0;i!=0;i++) {
+        i = i + 1;
 
-
+    }
+std::cout<<i;
 
     return 0;
 }
